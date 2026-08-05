@@ -1,0 +1,306 @@
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #171717;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12pt;
+    font-weight: 300;
+    color: #363636;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+p, ol, ul {
+    margin-top: 0px;
+}
+
+p {
+    line-height: 180%;
+}
+
+a {
+    color: #AB2657;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a img {
+    border: none;
+}
+
+/* Manejo de imágenes fluidas */
+.image {
+    display: inline-block;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-full {
+    display: block;
+    width: 100%;
+    margin: 0 0 2em 0;
+}
+
+/* ESTRUCTURA GLOBAL RESPONSIVA */
+.container {
+    max-width: 1200px;
+    width: 90%; /* Evita que el contenido toque los bordes del navegador */
+    margin: 0px auto;
+}
+
+/** WRAPPER PRINCIPAL */
+#wrapper {
+    background: #FFFFFF url(../images/bg01.png) repeat;
+}
+
+/*********************************************************************************/
+/* Header con Flexbox                                                            */
+/*********************************************************************************/
+#header {
+    min-height: 150px;
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, Menú a la derecha */
+    align-items: center;            /* Centrado vertical */
+    flex-wrap: wrap;                /* Si no entran en pantallas chicas, se apilan */
+    gap: 20px;                      /* Espacio de separación si se llegan a apilar */
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+#logo h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#logo a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+/* Menú de navegación con Flexbox */
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Por si los enlaces del menú son muchos y deben bajar */
+    gap: 10px;
+}
+
+#menu li a {
+    display: block;
+    padding: 0.80em 1.5em;
+    letter-spacing: 0.20em;
+    text-decoration: none;
+    font-size: 0.90em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #A2A2A2;
+}
+
+#menu .current_page_item a {
+    color: #FFF;
+}
+
+/*********************************************************************************/
+/* Estructura Principal de 2 Columnas (Contenido + Sidebar)                      */
+/*********************************************************************************/
+#page {
+    padding: 6em 0em 5em 0em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;                /* Clave para que el sidebar baje en celulares */
+    gap: 40px;
+}
+
+#content {
+    flex: 1;                        /* Se estira para ocupar el espacio disponible */
+    min-width: 300px;               /* Cuando la pantalla mide menos de esto, obliga a bajar al sidebar */
+    max-width: 790px;
+}
+
+#sidebar {
+    flex: 1;
+    min-width: 300px;               /* Ancho mínimo para que no se deformen las listas */
+    max-width: 345px;
+}
+
+#sidebar .title h2 {
+    font-size: 1.6em;
+}
+
+#sidebar .box1 {
+    margin-bottom: 3em;
+}
+
+ul.style2 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.style2 li {
+    border-top: solid 1px #E5E5E5;
+    padding: 0.80em 0;
+}
+
+ul.style2 li:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+/*********************************************************************************/
+/* Subsección interna de dos columnas (Flexbox)                                  */
+/*********************************************************************************/
+#two-column {
+    padding-top: 3em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#two-column article {
+    flex: 1;
+    min-width: 280px; /* Al medir menos de 280px el espacio, pasan a ocupar filas individuales */
+}
+
+#two-column .title h2 {
+    font-size: 1.6em;
+}
+
+/*********************************************************************************/
+/* Cabecera decorativa                                                           */
+/*********************************************************************************/
+#header-wrapper {
+    position: relative;
+    height: 600px;
+    background: url('../images/header.jpg') no-repeat top center;
+    background-size: cover;
+}
+
+#header-wrapper:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg01.png');
+    opacity: .1;
+}
+
+#header-wrapper2 {
+    background: rgba(0,0,0,.5);
+    height: 100%;
+}
+
+/*********************************************************************************/
+/* Sección Portfolio con Flexbox (4 Columnas)                                    */
+/*********************************************************************************/
+#portfolio-wrapper {
+    background: #710C31;
+    padding: 6em 0em;
+}
+
+#portfolio {
+    text-align: center;
+    color: #EEA7C1;
+}
+
+#portfolio .title h2 {
+    color: #FFF;
+}
+
+#portfolio .byline {
+    color: #EEA7C1;
+}
+
+/* Caja contenedora para las 4 columnas */
+.portfolio-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.portfolio-columns .column {
+    flex: 1;
+    min-width: 240px; /* Si la pantalla es chica, se redistribuyen en filas de 2 o de 1 */
+    background: rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/*********************************************************************************/
+/* Footer y Títulos                                                              */
+/*********************************************************************************/
+#copyright {
+    padding: 5em 0em;
+}
+
+#copyright p {
+    letter-spacing: 0.20em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.80em;
+    color: #6F6F6F;
+}
+
+#copyright a {
+    text-decoration: none;
+    color: #8C8C8C;
+}
+
+.title {
+    margin-bottom: 3em;
+    text-transform: uppercase;
+}
+
+.title h2 {
+    letter-spacing: 0.20em;
+    font-weight: 700;
+    font-size: 2em;
+    color: #171717;
+}
+
+.title .byline {
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.90em;
+    color: #6F6F6F;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 2em;
+    padding: 1em 3em;
+    background: #C4376B;
+    transition: background 0.25s ease-in-out;
+    letter-spacing: 0.20em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.90em;
+    color: #FFF;
+}
+
+.button:hover {
+    background: #D64077;
+}

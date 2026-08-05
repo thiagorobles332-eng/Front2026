@@ -1,0 +1,93 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Sekuya&display=swap');
+
+
+body {background-color:yellow; }
+
+.rojito {color:red; }
+
+.azulcito {color:blue; }
+
+.portada {
+          border: 10px solid blue;
+          width: 400px;
+          height:200px
+          }
+
+
+
+nav {background-color: silver;
+margin-bottom: 100px;
+}
+
+.fondogris {background-color: grey;}
+
+.azulino {background-color:blue;}
+
+footer {background-color: white;}
+
+h1{
+  font-family: "Sekuya", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.whatsapp-flotante img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-flotante img:hover {
+    transform: scale(1.1);
+}
+
+.fotito{
+  height: 200px;
+display: flex;
+justify-content: flex-end;
+
+align-items: flex-end;
+
+}
+
+header{display: flex;
+     justify-content: space-between;
+flex-wrap: wrap;
+background-color: green;
+       }
+
+.tamaño {width: 250px}
+
+
+
+.redes {width: 50px;
+        height:50px;  }
+
+h1{font-size: 100px}
+
+footer {display: flex;
+justify-content: space-around;
+align-items: center;
+ }
+
+.info{width: 300px;}
+
+
+.mapa{width: 250px;
+height: 250px;
+}
+
+.video {width: 250px;
+height: 250px;
+}
